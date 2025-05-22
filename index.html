@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interior Design Portfolio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    /* Global Styles */
+    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3 { margin: 1rem 0; }
+    .container { width: 90%; max-width: 1200px; margin: auto; padding: 2rem 0; }
+    .section { padding: 4rem 0; }
+
+    /* Header */
+    header { background: #f8f8f8; padding: 2rem 0; }
+    .logo { font-size: 2rem; font-weight: bold; }
+    nav ul { display: flex; justify-content: center; gap: 2rem; list-style: none; }
+
+    /* Hero */
+    .hero { display: flex; align-items: center; justify-content: center; height: 60vh; background: url('hero.jpg') center/cover no-repeat; }
+    .hero h1 { background: rgba(255,255,255,0.9); padding: 1rem 2rem; font-size: 2rem; border-radius: 8px; }
+
+    /* About */
+    #about img { float: left; width: 300px; margin-right: 2rem; border-radius: 8px; }
+
+    /* Projects Grid */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 2rem; }
+    .project { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .project:hover { transform: translateY(-5px); box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .project img { width: 100%; height: auto; display: block; }
+    .project-content { padding: 1rem; }
+
+    /* Footer */
+    footer { background: #333; color: #fff; text-align: center; padding: 2rem 0; }
+    footer a { color: #fff; margin: 0 1rem; }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      #about img { float: none; display: block; margin: auto 0 2rem; width: 80%; }
+      nav ul { flex-direction: column; gap: 1rem; align-items: center; }
+    }
+
+    /* WhatsApp link hover */
+    #whatsappLink:hover { color: green; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">Ruth Ngethe</div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1> Ruth's Interior Design Portfolio</h1>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <img src="image/1747914954280.jpg" alt="Portrait of Your Name, Interior Designer">
+      <p>Hello! I'm a passionate interior designer with over 2 years of experience creating functional and beautiful spaces. My philosophy is to blend form and function, focusing on sustainability and personalization.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section" style="background:#fafafa;">
+    <div class="container">
+      <h2>Selected Projects</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <img src="https://media.istockphoto.com/id/1977204395/photo/digital-image-of-a-beautiful-living-room-of-a-large-victorian-style-house.webp?a=1&b=1&s=612x612&w=0&k=20&c=iQ18PMbhacU8DUy-TbVgslacg63Js2a4BMrP-kKIny0=" alt="Modern Apartment Project">
+          <div class="project-content">
+            <h3>Modern Apartment</h3>
+            <p>Location: Kiambu Town</p>
+            <p>Renovated a 1,200 sq ft loft into a contemporary living space with open-plan kitchen and living area.</p>
+          </div>
+        </div>
+        <div class="project">
+          <img src="https://media.istockphoto.com/id/1990444472/photo/scandinavian-style-cozy-living-room-interior.webp?a=1&b=1&s=612x612&w=0&k=20&c=F5A3eF6myaJpITu5ABnGqNjacGWYskuxeZviU-KpxPE=" alt="Cozy Cottage Project">
+          <div class="project-content">
+            <h3>Cozy Cottage</h3>
+            <p>Location: Nakuru</p>
+            <p>Transformed a countryside cottage into a warm and inviting retreat using reclaimed wood and vintage accents.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="ruthngethe@gmail.com">ruthngethe@gmail.com</a></p>
+      <p><a href="tel:+254768397642">0768397642</a>
+</p>
+      <div>
+        <a href="https://www.facebook.com/Ruth Ngethe" target="_blank">Facebook</a>
+
+        
+        <a href="https://wa.me/0768397642" target="_blank" id="whatsappLink">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('whatsappLink').addEventListener('click', function () {
+      alert("You're about to chat with me on WhatsApp!");
+    });
+  </script>
+</body>
+</html>
